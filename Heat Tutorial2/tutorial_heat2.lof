@@ -1,0 +1,8 @@
+\deactivateaddvspace 
+\select@language {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces Plot of observation times for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R\relax }}{6}{figure.caption.3}
+\contentsline {figure}{\numberline {2}{\ignorespaces Heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R\relax }}{6}{figure.caption.4}
+\contentsline {figure}{\numberline {3}{\ignorespaces Cumulated heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R\relax }}{7}{figure.caption.5}
+\contentsline {figure}{\numberline {4}{\ignorespaces Plot of observation times for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R\relax }}{9}{figure.caption.6}
+\contentsline {figure}{\numberline {5}{\ignorespaces Heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R\relax }}{9}{figure.caption.7}
+\contentsline {figure}{\numberline {6}{\ignorespaces Cumulated heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R\relax }}{10}{figure.caption.8}
