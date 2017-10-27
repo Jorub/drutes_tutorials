@@ -90,7 +90,7 @@ The goal of this tutorial is to get familiar with the $DRUtES$ standard Richards
 
 \begin{figure}[!h]
 \centering
-\includegraphics[width=8cm]{heat_cond_simple.png}
+\includegraphics[width=8cm]{infilt.png}
 \end{figure}
 The process of infiltration is fundamental and yet very important in soil science. Infiltration into the soil determines water, heat and contaminant transport. Infiltration experiments can be used to determine some parameters describing soil hydraulic properties. 
 
@@ -114,19 +114,21 @@ $DRUtES$ works with configuration input file with the file extension .conf. Blan
 
 We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils. 
 
-\begin{table}[!h]\caption{\label{tab_heat}Material properties needed for scenarios.}
-\adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\begin{table}[!h]
+\centering
+\caption{\label{tab_heat}Material properties needed for scenarios.}
+\adjustbox{max height=\dimexpr\textheight-2cm\relax,
            max width=\textwidth}{
 
-\small\begin{tabular}{l c c c c c c}
+\small\begin{tabular}{l c c c c c c c}
 \hline
-& $\alpha$ & n & m &$ \theta_s$ &$ \theta_r$ & $K_s$ \\
-& &   & && \\
+& $\alpha$ & n & m &$ \theta_s$ &$ \theta_r$& Ss & $K_s$ \\
+& cm$^{-1}$ & -  & - & - & - & cm d$^{-1}$ \\
 Material & &   & &&\\
  \hline
-Sand &   & &&\\
-Silt & &   & && \\
-Clay &  &   & && \\
+Sand & 0.10 & 2.2  & 0.55 & 0.4 & 0  &1e-9 & 400\\
+Silt & 0.08 & 2.0  & 0.50 & 0.45 & 0.05 & 1e-9& 40 \\
+Clay & 0.01 & 1.5  & 0.33 & 0.5 & 0.1  &1e-10& 4 \\
 \hline
 \end{tabular}
 }
@@ -140,33 +142,33 @@ Infiltration into sandy soil.
 $global.conf$: Choose correct model, dimension, time discretization and observation times.
 \begin{enumerate}
 \item Open \textbf{\emph{global.conf}} in a text editor of your choice. 
-\item Model type: Your first input is the module. Input is \textbf{RE\_stdH}.
+\item Model type: Your first input is the module. Input is \textbf{RE}.
 \item Initial mesh configuration \begin{enumerate}
 \item The dimension of our problem is 1. Input: 1.
 \item We use the internal mesh generator. Input: 1. 
 \end{enumerate}
-\item Error criterion (not needed here, leave at default value) \begin{enumerate} 
+\item Error criterion \begin{enumerate} 
 \item Maximum number of iteration of the Picard method: 20 
 \item h tolerance: 1e-2.
 \end{enumerate}
 \item Time information 
 \begin{enumerate} 
 %\item integration method is 3 point formula. Input: 30. 
-\item Time units are in hours: input h
+\item Time units are in hours: input d
 \item Initial time: 1e-3.
-\item End time: 24.
+\item End time: 1.
 \item Minimum time step: 1e-6.
-\item Maximum time step: 0.1.
+\item Maximum time step: 0.01.
 \end{enumerate}
 \item Observation time settings \begin{enumerate}
 \item Observation time method: 2
 \item Set file format of observation: pure. Output in 1D is always in raw data. Different options will not impact output in 1D.
 \item Make sequence of observation time: n
-\item Number of observation times: 11
-\item Observation time values: 2, 4, 6, 8, 10, 12 ,14, 16, 18, 20, 22. Use a new line for each input. \textit{DRUtES} automatically generates output for the initial time and final time. DRUtES will generate 13 output files, e.g. \textit{MISSINS.dat}, where x is the number of the file and not the output time. The initial time is assigned an x value of 0. 
+\item Number of observation times: 10
+\item Observation time values: 0.05, 0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9. Use a new line for each input. \textit{DRUtES} automatically generates output for the initial time and final time. DRUtES will generate 13 output files, e.g. \textit{MISSINS.dat}, where x is the number of the file and not the output time. The initial time is assigned an x value of 0. 
 \end{enumerate}
 \item Observation point settings \begin{enumerate}
-\item Observation point coordinates: 0.0, 1. Use a new line for each input. \textit{DRUtES} will generate 2 output files, e.g. \textit{MISSING}, where x is the ID of the observation point. 
+\item Observation point coordinates: 0, 1000. Use a new line for each input. \textit{DRUtES} will generate 2 output files, e.g. \textit{MISSING}, where x is the ID of the observation point. 
 \end{enumerate}
 \item Ignore other settings for now. 
 \item Save $global.conf$
@@ -176,7 +178,7 @@ $global.conf$: Choose correct model, dimension, time discretization and observat
 $drumesh1D.conf$: Mesh definition, i.e. number of materials and spatial discretization
 \begin{enumerate}
 \item Open \textbf{\emph{drumesh1D.conf}} in a text editor of your choice. 
-\item Geometry information: 0.2 m - domain length
+\item Geometry information: 1000 cm - domain length
 \item Amount of intervals: 1
 \item
 \adjustbox{max height=\dimexpr\textheight-5cm\relax,
@@ -185,7 +187,7 @@ $drumesh1D.conf$: Mesh definition, i.e. number of materials and spatial discreti
 \hline
 density & bottom & top \\
  \hline
-0.05 & 0 & 1\\
+5 & 0 & 1000\\
 \hline
 \end{tabular}
 }
@@ -196,17 +198,65 @@ density & bottom & top \\
 \hline
 id & bottom & top \\
  \hline
-1& 0 & 1 \\
+1& 0 & 1000 \\
 \hline
 \end{tabular}
 }
 \end{enumerate}
 
-\emph{heat.conf}: Heat module after Sophocleous (1979). 
+\emph{matrix.conf}: Configuration file for water flow 
 
 
 \begin{enumerate}
 \item Open \emph{matrix.conf} in a text editor of your choice. 
+\item How-to use constitutive relations? [integer]: 1
+\item Length of interval for precalculating the constitutive functions: 500
+\item Discretization step for constituitive function precalculation: 0.1
+\item number of soil layers [integer]: 1
+\item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+	max width=\textwidth}{
+	\small\begin{tabular}{|c | c | c|c | c | c|}
+		\hline
+		alpha & n & m & theta\_r & theta\_s & specific storage\\
+		\hline
+		0.1 & 2.2  & 0.55 & 0.00 & 0.40  &1e-9  \\
+		\hline
+	\end{tabular}
+}
+\item anisothprophy description and hydraulic conductivity\\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+	max width=\textwidth}{
+	\small\begin{tabular}{|c | c |}
+		\hline
+		angle [degrees] & K\_11  \\
+		\hline
+		0 & 400  \\
+		\hline
+	\end{tabular}
+}
+\item sink(-) /source (+) term per layer: 0
+\item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+	max width=\textwidth}{
+	\small\begin{tabular}{|c | c | c|c |}
+		\hline
+		 init. cond [real] & type of init. cond &RCZA method [y/n] &  RCZA method val.  \\
+		\hline
+		   0.0           &            H\_tot                       & n		   &          0 \\
+		\hline
+	\end{tabular}
+}
+\item number of boundaries: 2
+\item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+	max width=\textwidth}{
+	\small\begin{tabular}{|c | c | c|c |}
+		\hline
+		boundary ID& boundary type   & use rain.dat [y/n]   & value  \\
+		\hline
+	101    &                   1        &           n        &        0.0 \\
+	102             &          2         &          n         &       4        \\
+	
+		\hline
+	\end{tabular}
+}
 \item Save matrix.conf.
 
 \end{enumerate}
