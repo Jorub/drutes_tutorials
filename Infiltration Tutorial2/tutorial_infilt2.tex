@@ -130,7 +130,7 @@ $\alpha$ [cm$^{-1}$]& inverse of the air entry value &0.10 &0.08&0.01 \\
  $m$ [-]& shape parameter &0.55  & 0.44 & 0.33  \\
   $ \theta_s$ [-]&saturated vol. water content&0.4  & 0.45 & 0.5  \\
   $ \theta_r$ [-]& residual vol. water content&0.0 & 0.05 & 0.1  \\
-  $Ss$ [cm$^{-1}$] & specific storage & 1e-9 & 1e-9 & 1e-10 \\
+  $Ss$ [cm$^{-1}$] & specific storage & 0 & 0 & 0 \\
   $K_s$ [cm d$^{-1}$] & saturated hydraulic conductivity & 400 & 40 & 4 \\ 
 \hline
 \end{tabular}
@@ -152,26 +152,26 @@ $global.conf$: Choose correct model, dimension, time discretization and observat
 \item Model type: Your first input is the module. Input is \textbf{RE}.
 \item Initial mesh configuration \begin{enumerate}
 \item The dimension of our problem is 1. Input: 1.
-\item We use the internal mesh generator. Input: 1.
+\item We use the internal mesh generator. Input: 1. 
 \end{enumerate}
 \item Error criterion \begin{enumerate} 
-\item Maximum number of iteration of the Picard method: 20.
+\item Maximum number of iteration of the Picard method: 20 
 \item h tolerance: 1e-1.
 \end{enumerate}
 \item Time information 
 \begin{enumerate} 
 %\item integration method is 3 point formula. Input: 30. 
-\item Time units are in hours: input d.
+\item Time units are in hours: input d
 \item Initial time: 1e-4.
 \item End time: 1.
 \item Minimum time step: 1e-4.
 \item Maximum time step: 0.1.
 \end{enumerate}
 \item Observation time settings \begin{enumerate}
-\item Observation time method: 2.
+\item Observation time method: 2
 \item Set file format of observation: pure. Output in 1D is always in raw data. Different options will not impact output in 1D.
-\item Make sequence of observation time: n.
-\item Number of observation times: 10.
+\item Make sequence of observation time: n
+\item Number of observation times: 10
 \item Observation time values: 0.001,
 0.005,
 0.01,
@@ -207,7 +207,7 @@ density & bottom & top \\
 \hline
 \end{tabular}
 }
-\item Number of materials: 1
+\item number of materials: 1
 \item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
            max width=\textwidth}{
 \small\begin{tabular}{|c | c | c|}
@@ -228,18 +228,18 @@ id & bottom & top \\
 \item How-to use constitutive relations? [integer]: 1
 \item Length of interval for precalculating the constitutive functions: 200
 \item Discretization step for constituitive function precalculation: 0.1
-\item Number of soil layers [integer]: 1
+\item number of soil layers [integer]: 1
 \item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c | c|c | c | c|}
 		\hline
 		alpha & n & m & theta\_r & theta\_s & specific storage\\
 		\hline
-		0.1 & 2.2  & 0.55 & 0.00 & 0.40  &1e-9  \\
+		0.1 & 2.2  & 0.55 & 0.00 & 0.40  &0  \\
 		\hline
 	\end{tabular}
 }
-\item The angle of the anistropy determines the angle of the reference coordinate system. 0 means vertical flow. Anisothpropy description. Anisothpropy description and hydraulic conductivity\\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\item The angle of the anisotropy determines the angle of the reference coordinate system. 0 means vertical flow. Anisotropy description. Anisotpropy description and hydraulic conductivity\\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c |}
 		\hline
@@ -256,7 +256,7 @@ id & bottom & top \\
 		\hline
 		 init. cond [real] & type of init. cond &RCZA method [y/n] &  RCZA method val.  \\
 		\hline
-		   0.0           &            H\_tot                       & n		   &          0 \\
+		   -200.0           &            hpres                       & n		   &          0 \\
 		\hline
 	\end{tabular}
 }
@@ -267,8 +267,8 @@ id & bottom & top \\
 		\hline
 		boundary ID& boundary type   & use rain.dat [y/n]   & value  \\
 		\hline
-	101    &                   1        &           n        &        0.0 \\
-	102             &          2         &          n         &       4        \\
+	101    &                   3        &           n        &        0.0 \\
+	102             &          1         &          n         &       0.0        \\
 	
 		\hline
 	\end{tabular}
@@ -300,7 +300,7 @@ Infiltration into silty soil
 		\hline
 		alpha & n & m & theta\_r & theta\_s & specific storage\\
 		\hline
-		0.08 & 1.8   & 0.44 & 0.05 & 0.45  & 1e-9 \\
+		0.08 & 1.8   & 0.44 & 0.05 & 0.45  & 0 \\
 		\hline
 	\end{tabular}
 }
@@ -338,7 +338,7 @@ Infiltration into clay soil
 		\hline
 		alpha & n & m & theta\_r & theta\_s & specific storage\\
 		\hline
-		0.01 & 1.5  & 0.33 & 0.1& 0.5   &1e-10 \\
+		0.01 & 1.5  & 0.33 & 0.1& 0.5   &0 \\
 		\hline
 	\end{tabular}
 }
@@ -378,7 +378,7 @@ Run the simulation in the terminal console.
 
 
 \section*{Results}
-In the following time series of the infiltration into sand, silt and clay are presented. The infiltration front has moved furthest in clay, followed by sand and then silt. However, the time series show that their numerical approximation is insufficient, especially for sand. This is because sand is the numerically most difficult to model as it has the steepest retention properties (largest n and largest alpha). In the beginning, the flux in sand is 100 cm d$^{-1}$, which is 20 times the size of the assigned flux. For silt, the flux is overestimated approximately 12 times and for clay, the flux is overestimated twice. 
+In the following time series of the infiltration into sand, silt and clay are presented. The infiltration front has moved furthest in sand, followed by silt and then clay. This is because of the assigned boundary conditions. The flux into sandy soil is very large. However, the time series show that their numerical approximation is insufficient, especially for sand. This is because sand is the numerically most difficult to model as it has the steepest retention properties (largest n and largest alpha). In the beginning, the flux in sand is 15000 cm d$^{-1}$, which is 20 times the size of the assigned flux. For silt, the flux is overestimated approximately 12 times and for clay, the flux is overestimated twice. 
 
 \begin{figure}
 \centering
