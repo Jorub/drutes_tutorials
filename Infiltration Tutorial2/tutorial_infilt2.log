@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.27)  31 OCT 2017 11:56
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.27)  31 OCT 2017 12:00
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2464,120 +2464,120 @@ Overfull \hbox (24.99785pt too wide) in paragraph at lines 263--273
 [] 
  []
 
-[6] [7] [8] <Figures/obs_press_head_sand.png, id=169, 803.0pt x 602.25pt>
+[6] [7] <Figures/obs_press_head_sand.png, id=162, 803.0pt x 602.25pt>
 File: Figures/obs_press_head_sand.png Graphic file (type png)
 
 <use Figures/obs_press_head_sand.png>
-Package pdftex.def Info: Figures/obs_press_head_sand.png used on input line 399
+Package pdftex.def Info: Figures/obs_press_head_sand.png used on input line 398
 .
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_water_sand.png, id=170, 803.0pt x 602.25pt>
+<Figures/obs_water_sand.png, id=163, 803.0pt x 602.25pt>
 File: Figures/obs_water_sand.png Graphic file (type png)
 
 <use Figures/obs_water_sand.png>
-Package pdftex.def Info: Figures/obs_water_sand.png used on input line 400.
+Package pdftex.def Info: Figures/obs_water_sand.png used on input line 399.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_flux_sand.png, id=171, 803.0pt x 602.25pt>
+<Figures/obs_flux_sand.png, id=164, 803.0pt x 602.25pt>
 File: Figures/obs_flux_sand.png Graphic file (type png)
 
 <use Figures/obs_flux_sand.png>
-Package pdftex.def Info: Figures/obs_flux_sand.png used on input line 401.
+Package pdftex.def Info: Figures/obs_flux_sand.png used on input line 400.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_press_head_silt.png, id=172, 803.0pt x 602.25pt>
+<Figures/obs_press_head_silt.png, id=165, 803.0pt x 602.25pt>
 File: Figures/obs_press_head_silt.png Graphic file (type png)
 
 <use Figures/obs_press_head_silt.png>
-Package pdftex.def Info: Figures/obs_press_head_silt.png used on input line 407
+Package pdftex.def Info: Figures/obs_press_head_silt.png used on input line 406
 .
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_water_silt.png, id=173, 803.0pt x 602.25pt>
+<Figures/obs_water_silt.png, id=166, 803.0pt x 602.25pt>
 File: Figures/obs_water_silt.png Graphic file (type png)
 
 <use Figures/obs_water_silt.png>
-Package pdftex.def Info: Figures/obs_water_silt.png used on input line 408.
+Package pdftex.def Info: Figures/obs_water_silt.png used on input line 407.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_flux_silt.png, id=174, 803.0pt x 602.25pt>
+<Figures/obs_flux_silt.png, id=167, 803.0pt x 602.25pt>
 File: Figures/obs_flux_silt.png Graphic file (type png)
 
 <use Figures/obs_flux_silt.png>
-Package pdftex.def Info: Figures/obs_flux_silt.png used on input line 409.
+Package pdftex.def Info: Figures/obs_flux_silt.png used on input line 408.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/obs_press_head_clay.png, id=175, 803.0pt x 602.25pt>
+<Figures/obs_press_head_clay.png, id=168, 803.0pt x 602.25pt>
 File: Figures/obs_press_head_clay.png Graphic file (type png)
 
 <use Figures/obs_press_head_clay.png>
-Package pdftex.def Info: Figures/obs_press_head_clay.png used on input line 417
+Package pdftex.def Info: Figures/obs_press_head_clay.png used on input line 416
 .
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_water_clay.png, id=176, 803.0pt x 602.25pt>
+<Figures/obs_water_clay.png, id=169, 803.0pt x 602.25pt>
 File: Figures/obs_water_clay.png Graphic file (type png)
 
 <use Figures/obs_water_clay.png>
-Package pdftex.def Info: Figures/obs_water_clay.png used on input line 418.
+Package pdftex.def Info: Figures/obs_water_clay.png used on input line 417.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_flux_clay.png, id=177, 803.0pt x 602.25pt>
+<Figures/obs_flux_clay.png, id=170, 803.0pt x 602.25pt>
 File: Figures/obs_flux_clay.png Graphic file (type png)
 
 <use Figures/obs_flux_clay.png>
-Package pdftex.def Info: Figures/obs_flux_clay.png used on input line 419.
+Package pdftex.def Info: Figures/obs_flux_clay.png used on input line 418.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-[9 <./Figures/obs_press_head_sand.png (PNG copy)> <./Figures/obs_water_sand.png
+[8 <./Figures/obs_press_head_sand.png (PNG copy)> <./Figures/obs_water_sand.png
  (PNG copy)> <./Figures/obs_flux_sand.png (PNG copy)>]
-<Figures/obs_press_head_sand6.png, id=182, 803.0pt x 602.25pt>
+<Figures/obs_press_head_sand6.png, id=178, 803.0pt x 602.25pt>
 File: Figures/obs_press_head_sand6.png Graphic file (type png)
 
 <use Figures/obs_press_head_sand6.png>
 Package pdftex.def Info: Figures/obs_press_head_sand6.png used on input line 43
-1.
+0.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_water_sand6.png, id=183, 803.0pt x 602.25pt>
+<Figures/obs_water_sand6.png, id=179, 803.0pt x 602.25pt>
 File: Figures/obs_water_sand6.png Graphic file (type png)
 
 <use Figures/obs_water_sand6.png>
-Package pdftex.def Info: Figures/obs_water_sand6.png used on input line 432.
+Package pdftex.def Info: Figures/obs_water_sand6.png used on input line 431.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
 
-<Figures/obs_flux_sand6.png, id=184, 803.0pt x 602.25pt>
+<Figures/obs_flux_sand6.png, id=180, 803.0pt x 602.25pt>
 File: Figures/obs_flux_sand6.png Graphic file (type png)
 
 <use Figures/obs_flux_sand6.png>
-Package pdftex.def Info: Figures/obs_flux_sand6.png used on input line 433.
+Package pdftex.def Info: Figures/obs_flux_sand6.png used on input line 432.
 (pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
- [10 <./Figures/obs_press_head_silt.png (PNG copy)> <./Figures/obs_water_silt.p
-ng (PNG copy)> <./Figures/obs_flux_silt.png (PNG copy)> <./Figures/obs_press_he
-ad_clay.png (PNG copy)> <./Figures/obs_water_clay.png (PNG copy)> <./Figures/ob
-s_flux_clay.png (PNG copy)>] [11 <./Figures/obs_press_head_sand6.png (PNG copy)
-> <./Figures/obs_water_sand6.png (PNG copy)> <./Figures/obs_flux_sand6.png (PNG
- copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
- [12]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
+ [9 <./Figures/obs_press_head_silt.png (PNG copy)> <./Figures/obs_water_silt.pn
+g (PNG copy)> <./Figures/obs_flux_silt.png (PNG copy)> <./Figures/obs_press_hea
+d_clay.png (PNG copy)> <./Figures/obs_water_clay.png (PNG copy)> <./Figures/obs
+_flux_clay.png (PNG copy)>] [10 <./Figures/obs_press_head_sand6.png (PNG copy)>
+ <./Figures/obs_water_sand6.png (PNG copy)> <./Figures/obs_flux_sand6.png (PNG 
+copy)>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 467.
+ [11]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 467.
  (./tutorial_infilt2.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 467.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 467.
 Package rerunfilecheck Info: File `tutorial_infilt2.out' has not changed.
 (rerunfilecheck)             Checksum: 0A47628B05AF790137BB59D9D20DA406;191.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 467.
  ) 
 Here is how much of TeX's memory you used:
- 23839 strings out of 493029
- 430154 string characters out of 6136233
+ 23838 strings out of 493029
+ 430147 string characters out of 6136233
  692656 words of memory out of 5000000
  26887 multiletter control sequences out of 15000+600000
  118587 words of font info for 175 fonts, out of 8000000 for 9000
@@ -2596,10 +2596,10 @@ onts/type1/nowacki/iwona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on tutorial_infilt2.pdf (12 pages, 806310 bytes).
+Output written on tutorial_infilt2.pdf (11 pages, 805939 bytes).
 PDF statistics:
- 270 PDF objects out of 1000 (max. 8388607)
- 221 compressed objects within 3 object streams
- 101 named destinations out of 1000 (max. 500000)
+ 266 PDF objects out of 1000 (max. 8388607)
+ 218 compressed objects within 3 object streams
+ 100 named destinations out of 1000 (max. 500000)
  30833 words of extra memory for PDF output out of 35830 (max. 10000000)
 
