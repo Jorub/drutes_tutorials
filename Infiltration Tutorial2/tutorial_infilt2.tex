@@ -424,7 +424,8 @@ In the following time series of the infiltration into sand, silt and clay are pr
 \newpage
 \subsection*{Task 2}
 
-The solution for sand the water content and hydraulic pressure become a lot smoother with finer spatial discretization, eg. dz=0.5 and a finer temporal discretization by setting the lower minimal time step to 0.01. The fluxes are still spiky, but correlate with the infiltration front. Better solutions can be found by decreasing the minimal time step even further and also the h tolerance criterion. This, however, increases the simulation time substantially. For a reliable solution, the numerical solution should converge. This means that decreasing the time step, or discretization, should not lead to an entirely different solution. 
+The solution for sand the water content and hydraulic pressure become a lot smoother with finer spatial discretization, eg. dz=0.5 and a finer temporal discretization by setting the lower minimal time step to 0.01. The fluxes are still spiky, but correlate with the infiltration front. Different solutions can be found by decreasing the minimal time step even further and also the h tolerance criterion. This, however, increases the simulation time substantially. For a reliable solution, the numerical solution should converge. This means that decreasing the time step, or discretization, should not lead to an entirely different solution. We notice, that reducing the h tolerance criterion improves the solution locally, but that reducing the maximum time step changes the depth of the infiltration front. This is because the mass balance is very much connected to the temporal discretization.
+
 \begin{figure}[!h]
 	\centering
 	\includegraphics[width=0.49\textwidth]{obs_press_head_sand6.png}
