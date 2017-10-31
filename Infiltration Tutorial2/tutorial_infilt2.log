@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.27)  31 OCT 2017 11:53
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015/Debian) (preloaded format=pdflatex 2017.10.27)  31 OCT 2017 11:56
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -2354,13 +2354,9 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 10.42007pt on input line 60.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
 (Font)              scaled to size 8.33606pt on input line 60.
-
-Overfull \hbox (170.61201pt too wide) in paragraph at lines 60--60
- [][] 
- []
-
 Package tocbasic Info: character protrusion at toc deactivated on input line 63
 .
+
 (./tutorial_infilt2.toc
 Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/pplj/m/sc/10'.
@@ -2582,7 +2578,7 @@ Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
 Here is how much of TeX's memory you used:
  23839 strings out of 493029
  430154 string characters out of 6136233
- 692691 words of memory out of 5000000
+ 692656 words of memory out of 5000000
  26887 multiletter control sequences out of 15000+600000
  118587 words of font info for 175 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
@@ -2600,7 +2596,7 @@ onts/type1/nowacki/iwona/iwonar.pfb></usr/share/texlive/texmf-dist/fonts/type1/
 urw/palatino/uplb8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino
 /uplbi8a.pfb></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb
 ></usr/share/texlive/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on tutorial_infilt2.pdf (12 pages, 806600 bytes).
+Output written on tutorial_infilt2.pdf (12 pages, 806310 bytes).
 PDF statistics:
  270 PDF objects out of 1000 (max. 8388607)
  221 compressed objects within 3 object streams
