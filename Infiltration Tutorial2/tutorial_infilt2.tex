@@ -91,6 +91,7 @@ The goal of this tutorial is to get familiar with the $DRUtES$ standard Richards
 \begin{figure}[!h]
 \centering
 \includegraphics[width=8cm]{infilt.png}
+\caption{Simplified scheme of infiltration.}
 \end{figure}
 The process of infiltration is fundamental and yet very important in soil science. Infiltration into the soil determines water, heat and contaminant transport. Infiltration experiments can be used to determine some parameters describing soil hydraulic properties. 
 
@@ -140,7 +141,16 @@ $\alpha$ [cm$^{-1}$]& inverse of the air entry value &0.10 &0.08&0.01 \\
 
 \includegraphics[width=6cm]{retention_curve.png}
 \includegraphics[width=6cm]{cond_hyd_curve.png}
+\caption{Retention curve and hydraulic conductivity for parameterized with van Genuchten model for sand, silt and clay.}
 \end{figure}
+
+\begin{figure}[!h]
+\centering
+\includegraphics[width=5cm]{domain.png}
+\caption{1D domain set-up of infiltration scenario with top and bottom boundary conditions. A constant ponding is assigned to the top, defined with a Dirichlet condition of 0 cm. Free drainage occurs at the bottom, which indicates that the pressure head gradient is 0 and water flows only due to gravity.}
+\end{figure}
+
+\newpage
 
 \section*{Scenario 1}
 
@@ -250,7 +260,7 @@ id & bottom & top \\
 	\end{tabular}
 }
 \item sink(-) /source (+) term per layer: 0
-\item \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\item Initial condition is a constant pressure head of -200 cm across the soil. \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c | c|c |}
 		\hline
@@ -368,19 +378,23 @@ Run the simulation in the terminal console.
 
 \begin{enumerate}
 \item Describe the infiltration fronts for sand, silt and clay.
-\item The results of the fluxes look horrible. This is because of insufficient discretization. Improve the discretization. With what set-up are the results better? Possibilities are: 
+\item The results do not look very smooth. This is because of insufficient discretization. Improve the discretization for sand. With what set-up are the results better? Possibilities are: 
 \begin{itemize}
 \item in global.conf: Decrease the pressure head tolerance, Decrease the initial time step, Decrease the maximum time step.
 \item in drumesh1D.conf: Decrease the mesh density. 
 \end{itemize}
+\item Why is the flux at the top so huge in the beginning?
 \end{enumerate}
 
 
-
+\newpage
+\newpage
 \section*{Results}
-In the following time series of the infiltration into sand, silt and clay are presented. The infiltration front has moved furthest in sand, followed by silt and then clay. This is because of the assigned boundary conditions. The flux into sandy soil is very large. However, the time series show that their numerical approximation is insufficient, especially for sand. This is because sand is the numerically most difficult to model as it has the steepest retention properties (largest n and largest alpha). In the beginning, the flux in sand is 15000 cm d$^{-1}$, which is 20 times the size of the assigned flux. For silt, the flux is overestimated approximately 12 times and for clay, the flux is overestimated twice. 
 
-\begin{figure}
+\subsection*{Task 1}
+In the following time series of the infiltration into sand, silt and clay are presented. The infiltration front has moved furthest in sand, followed by silt and then clay. This is because of the assigned boundary conditions. The flux into sandy soil is very large. However, the time series show the numerical approximation is insufficient, especially for sand. This is because sand is the numerically most difficult to model as it has the steepest retention properties (largest n and largest alpha).
+
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.49\textwidth]{obs_press_head_sand.png}
 \includegraphics[width=0.49\textwidth]{obs_water_sand.png}
@@ -388,7 +402,7 @@ In the following time series of the infiltration into sand, silt and clay are pr
 \caption{Observation time series of pressure head, vol. water content and flux of infiltration into sand.}
 \end{figure}
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.49\textwidth]{obs_press_head_silt.png}
 \includegraphics[width=0.49\textwidth]{obs_water_silt.png}
@@ -398,7 +412,7 @@ In the following time series of the infiltration into sand, silt and clay are pr
 \end{figure}
 
 
-\begin{figure}
+\begin{figure}[!h]
 \centering
 \includegraphics[width=0.49\textwidth]{obs_press_head_clay.png}
 \includegraphics[width=0.49\textwidth]{obs_water_clay.png}
@@ -409,6 +423,23 @@ In the following time series of the infiltration into sand, silt and clay are pr
 
 \newpage
 \newpage
+\subsection*{Task 2}
+
+The solution for sand the water content and hydraulic pressure become a lot smoother with finer spatial discretization, eg. dz=0.5 and a finer temporal discretization by setting the lower minimal time step to 0.01. The fluxes are still spiky, but correlate with the infiltration front. Better solutions can be found by decreasing the minimal time step even further and also the h tolerance criterion. This, however, increases the simulation time substantially. For a reliable solution, the numerical solution should converge. This means that decreasing the time step, or discretization, should not lead to an entirely different solution. 
+\begin{figure}[!h]
+	\centering
+	\includegraphics[width=0.49\textwidth]{obs_press_head_sand6.png}
+	\includegraphics[width=0.49\textwidth]{obs_water_sand6.png}
+	\includegraphics[width=0.49\textwidth]{obs_flux_sand6.png}
+	\caption{Observation time series of pressure head, vol. water content and flux of infiltration into sand with improved discretization.}
+\end{figure}
+
+\subsection*{Task 3}
+With the initial set-up, the flux at the top in sand is 15000 cm d$^{-1}$ in the beginning of the simulation. For silt, the flux was numerically calculated to be at 1500 cm d$^{-1}$ and for clay at 150 cm d$^{-1}$. The flux estimation becomes a lot larger with finer spatial discretization.
+
+ This is due to the large hydraulic gradient between the saturated top boundary and the next node of $\nabla h=\frac{-200-0~}{\mathrm{dz}}$. The smaller the nodal distance dz is, the greater is the gradient. According to the Darcy-Buckingham law, the flux is proportional to the hydraulic conductivity. The hydraulic conductivity is highest for sand. This is why the flux is largest for sand and lowest for clay.
+\newpage
+\newpage
 \newpage
 \newpage
 \section{Outcome}
@@ -416,7 +447,7 @@ In the following time series of the infiltration into sand, silt and clay are pr
 \item You got familiar with the $DRUtES$ standard Richards Equation modules in 1D.
 \item You understand basic parameterization of a typical sand, silt and clay with the van Genuchten-Mualem model.
 \item You simulated infiltration in different soils.
-\item You understand the term \emph{Neumann boundary condition} and \emph{initial condition}.
+\item You understand the term \emph{Free drainage} and \emph{initial condition}.
 \item You understand the effects of different discretizations.
 \end{enumerate}
 
