@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 NOV 2017 10:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (TeX Live 2015) (preloaded format=pdflatex 2015.5.24)  14 NOV 2017 11:52
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -2270,7 +2270,12 @@ LaTeX Font Info:    Font shape `U/msb/m/n' will be
 
 Package tocbasic Info: character protrusion at lof deactivated on input line 65
 .
- (./coupld_heat_water.lof)
+ (./coupld_heat_water.lof
+Overfull \hbox (12.77553pt too wide) in paragraph at lines 4--4
+ \T1/pplj/m/n/10 bot-tom bound-ary con-di-tions. There are now two bound- 
+ []
+
+)
 \tf@lof=\write5
 \openout5 = `coupld_heat_water.lof'.
 
@@ -2286,7 +2291,7 @@ Package microtype Info: Character `029' is missing
 (microtype)             in font `T1/iwona/m/sc/14.4'.
 (microtype)             Ignoring protrusion settings for this character.
 
-<Figures/coupled.png, id=48, 345.9324pt x 334.851pt>
+<Figures/coupled.png, id=46, 345.9324pt x 334.851pt>
 File: Figures/coupled.png Graphic file (type png)
  <use Figures/coupled.png>
 Package pdftex.def Info: Figures/coupled.png used on input line 93.
@@ -2294,200 +2299,115 @@ Package pdftex.def Info: Figures/coupled.png used on input line 93.
 LaTeX Font Info:    Font shape `T1/iwona/bx/n' in size <9> not available
 (Font)              Font shape `T1/iwona/b/n' tried instead on input line 94.
 
-Overfull \hbox (24.32985pt too wide) in paragraph at lines 100--101
+Overfull \hbox (24.32985pt too wide) in paragraph at lines 101--102
 []\T1/pplj/m/n/10 To de-fine the mesh or spa-tial dis-cretiza-tion in 1D, we re
 -quire \T1/pplj/m/it/10 drumesh1D.conf\T1/pplj/m/n/10 .
  []
 
 [2 <./Figures/coupled.png>] [3]
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 124.
+(Font)              scaled to size 9.37807pt on input line 126.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 124.
+(Font)              scaled to size 7.29405pt on input line 126.
 LaTeX Font Info:    Font shape `U/msa/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 124.
+(Font)              scaled to size 5.21004pt on input line 126.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 9.37807pt on input line 124.
+(Font)              scaled to size 9.37807pt on input line 126.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 7.29405pt on input line 124.
+(Font)              scaled to size 7.29405pt on input line 126.
 LaTeX Font Info:    Font shape `U/msb/m/n' will be
-(Font)              scaled to size 5.21004pt on input line 124.
+(Font)              scaled to size 5.21004pt on input line 126.
 
-<Figures/retention_curve.png, id=70, 401.5pt x 401.5pt>
-File: Figures/retention_curve.png Graphic file (type png)
+<Figures/domain_coupled.png, id=69, 489.83pt x 386.44376pt>
+File: Figures/domain_coupled.png Graphic file (type png)
 
-<use Figures/retention_curve.png>
-Package pdftex.def Info: Figures/retention_curve.png used on input line 142.
-(pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
+<use Figures/domain_coupled.png>
+Package pdftex.def Info: Figures/domain_coupled.png used on input line 149.
+(pdftex.def)             Requested size: 284.52756pt x 224.47954pt.
 
-<Figures/cond_hyd_curve.png, id=71, 401.5pt x 401.5pt>
-File: Figures/cond_hyd_curve.png Graphic file (type png)
+<Figures/radiation_data.png, id=70, 702.625pt x 481.8pt>
+File: Figures/radiation_data.png Graphic file (type png)
 
-<use Figures/cond_hyd_curve.png>
-Package pdftex.def Info: Figures/cond_hyd_curve.png used on input line 143.
-(pdftex.def)             Requested size: 170.71652pt x 170.71794pt.
+<use Figures/radiation_data.png>
+Package pdftex.def Info: Figures/radiation_data.png used on input line 156.
+(pdftex.def)             Requested size: 284.52756pt x 195.10587pt.
 
-Overfull \hbox (7.64305pt too wide) in paragraph at lines 142--144
-[][] [] 
- []
 
-<Figures/domain.png, id=72, 284.06125pt x 300.12125pt>
-File: Figures/domain.png Graphic file (type png)
+LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<use Figures/domain.png>
-Package pdftex.def Info: Figures/domain.png used on input line 149.
-(pdftex.def)             Requested size: 142.26378pt x 150.31212pt.
- [4 <./Figures/retention_curve.png> <./Figures/cond_hyd_curve.png> <./Figures/d
-omain.png>]
+<Figures/water_data.png, id=71, 702.625pt x 481.8pt>
+File: Figures/water_data.png Graphic file (type png)
+
+<use Figures/water_data.png>
+Package pdftex.def Info: Figures/water_data.png used on input line 162.
+(pdftex.def)             Requested size: 284.52756pt x 195.10587pt.
+
+
+LaTeX Warning: `!h' float specifier changed to `!ht'.
+
+[4 <./Figures/domain_coupled.png>]
 LaTeX Font Info:    Font shape `T1/pplj/bx/it' in size <10> not available
-(Font)              Font shape `T1/pplj/b/it' tried instead on input line 161.
-
-Overfull \hbox (14.84663pt too wide) in paragraph at lines 185--195
-\T1/pplj/m/n/10 er-ate 12 out-put files, e.g. \T1/pplj/m/it/10 RE_matrix_press_
-head-x.dat\T1/pplj/m/n/10 , \T1/pplj/m/it/10 RE_matrix_theta-
- []
-
-[5]
-Overfull \hbox (24.99785pt too wide) in paragraph at lines 263--273
+(Font)              Font shape `T1/pplj/b/it' tried instead on input line 173.
+ [5 <./Figures/radiation_data.png> <./Figures/water_data.png>] [6]
+Overfull \hbox (24.99785pt too wide) in paragraph at lines 267--277
 [] 
  []
 
-[6] [7] <Figures/obs_press_head_sand.png, id=162, 803.0pt x 602.25pt>
-File: Figures/obs_press_head_sand.png Graphic file (type png)
+[7] <Figures/obs_water_point_coupled_standard.png, id=156, 803.0pt x 602.25pt>
+File: Figures/obs_water_point_coupled_standard.png Graphic file (type png)
 
-<use Figures/obs_press_head_sand.png>
-Package pdftex.def Info: Figures/obs_press_head_sand.png used on input line 398
-.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
+<use Figures/obs_water_point_coupled_standard.png>
+Package pdftex.def Info: Figures/obs_water_point_coupled_standard.png used on i
+nput line 352.
+(pdftex.def)             Requested size: 284.52756pt x 213.4005pt.
 
-<Figures/obs_water_sand.png, id=163, 803.0pt x 602.25pt>
-File: Figures/obs_water_sand.png Graphic file (type png)
+<Figures/obs_temp_point_temp_coupled_standard.png, id=157, 803.0pt x 602.25pt>
+File: Figures/obs_temp_point_temp_coupled_standard.png Graphic file (type png)
 
-<use Figures/obs_water_sand.png>
-Package pdftex.def Info: Figures/obs_water_sand.png used on input line 399.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_flux_sand.png, id=164, 803.0pt x 602.25pt>
-File: Figures/obs_flux_sand.png Graphic file (type png)
-
-<use Figures/obs_flux_sand.png>
-Package pdftex.def Info: Figures/obs_flux_sand.png used on input line 400.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_press_head_silt.png, id=165, 803.0pt x 602.25pt>
-File: Figures/obs_press_head_silt.png Graphic file (type png)
-
-<use Figures/obs_press_head_silt.png>
-Package pdftex.def Info: Figures/obs_press_head_silt.png used on input line 406
-.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_water_silt.png, id=166, 803.0pt x 602.25pt>
-File: Figures/obs_water_silt.png Graphic file (type png)
-
-<use Figures/obs_water_silt.png>
-Package pdftex.def Info: Figures/obs_water_silt.png used on input line 407.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_flux_silt.png, id=167, 803.0pt x 602.25pt>
-File: Figures/obs_flux_silt.png Graphic file (type png)
-
-<use Figures/obs_flux_silt.png>
-Package pdftex.def Info: Figures/obs_flux_silt.png used on input line 408.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
+<use Figures/obs_temp_point_temp_coupled_standard.png>
+Package pdftex.def Info: Figures/obs_temp_point_temp_coupled_standard.png used 
+on input line 358.
+(pdftex.def)             Requested size: 284.52756pt x 213.4005pt.
 
 
 LaTeX Warning: `!h' float specifier changed to `!ht'.
 
-<Figures/obs_press_head_clay.png, id=168, 803.0pt x 602.25pt>
-File: Figures/obs_press_head_clay.png Graphic file (type png)
-
-<use Figures/obs_press_head_clay.png>
-Package pdftex.def Info: Figures/obs_press_head_clay.png used on input line 416
-.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_water_clay.png, id=169, 803.0pt x 602.25pt>
-File: Figures/obs_water_clay.png Graphic file (type png)
-
-<use Figures/obs_water_clay.png>
-Package pdftex.def Info: Figures/obs_water_clay.png used on input line 417.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_flux_clay.png, id=170, 803.0pt x 602.25pt>
-File: Figures/obs_flux_clay.png Graphic file (type png)
-
-<use Figures/obs_flux_clay.png>
-Package pdftex.def Info: Figures/obs_flux_clay.png used on input line 418.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-
-LaTeX Warning: `!h' float specifier changed to `!ht'.
-
-[8 <./Figures/obs_press_head_sand.png (PNG copy)> <./Figures/obs_water_sand.png
- (PNG copy)> <./Figures/obs_flux_sand.png (PNG copy)>] [9 <./Figures/obs_press_
-head_silt.png (PNG copy)> <./Figures/obs_water_silt.png (PNG copy)> <./Figures/
-obs_flux_silt.png (PNG copy)> <./Figures/obs_press_head_clay.png (PNG copy)> <.
-/Figures/obs_water_clay.png (PNG copy)> <./Figures/obs_flux_clay.png (PNG copy)
->] <Figures/obs_press_head_sand6.png, id=182, 803.0pt x 602.25pt>
-File: Figures/obs_press_head_sand6.png Graphic file (type png)
-
-<use Figures/obs_press_head_sand6.png>
-Package pdftex.def Info: Figures/obs_press_head_sand6.png used on input line 43
-1.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_water_sand6.png, id=183, 803.0pt x 602.25pt>
-File: Figures/obs_water_sand6.png Graphic file (type png)
-
-<use Figures/obs_water_sand6.png>
-Package pdftex.def Info: Figures/obs_water_sand6.png used on input line 432.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
-
-<Figures/obs_flux_sand6.png, id=184, 803.0pt x 602.25pt>
-File: Figures/obs_flux_sand6.png Graphic file (type png)
-
-<use Figures/obs_flux_sand6.png>
-Package pdftex.def Info: Figures/obs_flux_sand6.png used on input line 433.
-(pdftex.def)             Requested size: 164.64185pt x 123.48042pt.
- [10 <./Figures/obs_press_head_sand6.png (PNG copy)> <./Figures/obs_water_sand6
-.png (PNG copy)> <./Figures/obs_flux_sand6.png (PNG copy)>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 468.
- [11]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 468.
+[8 <./Figures/obs_water_point_coupled_standard.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 386.
+ [9 <./Figures/obs_temp_point_temp_coupled_standard.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 386.
  (./coupld_heat_water.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 468.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 468.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 386.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 386.
 Package rerunfilecheck Info: File `coupld_heat_water.out' has not changed.
 (rerunfilecheck)             Checksum: 0A47628B05AF790137BB59D9D20DA406;191.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 468.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 386.
  ) 
 Here is how much of TeX's memory you used:
- 21341 strings out of 493089
- 362980 string characters out of 6134842
+ 21277 strings out of 493089
+ 361564 string characters out of 6134842
  619852 words of memory out of 5000000
- 24342 multiletter control sequences out of 15000+600000
- 118587 words of font info for 175 fonts, out of 8000000 for 9000
+ 24299 multiletter control sequences out of 15000+600000
+ 118030 words of font info for 173 fonts, out of 8000000 for 9000
  1143 hyphenation exceptions out of 8191
- 56i,13n,75p,10498b,502s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 56i,13n,75p,10498b,574s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/local/texlive/2015/texmf-dist/fonts/enc/dvips/base/8r.enc}{/usr/local/t
 exlive/2015/texmf-dist/fonts/enc/dvips/iwona/ec-iwona.enc}{/usr/local/texlive/2
 015/texmf-dist/fonts/enc/dvips/iwona/ec-iwona-sc.enc}</usr/local/texlive/2015/t
-exmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2015/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/texm
-f-dist/fonts/type1/public/fpl/fplbij8a.pfb></usr/local/texlive/2015/texmf-dist/
-fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/texmf-dist/font
-s/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/
-public/fpl/fplrij8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/nowacki
-/iwona/iwonab.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/nowacki/iwona
-/iwonar.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb8a
-.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb><
-/usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/lo
-cal/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
-Output written on coupld_heat_water.pdf (11 pages, 818487 bytes).
+exmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/local/texlive/2015/te
+xmf-dist/fonts/type1/public/fpl/fplbij8a.pfb></usr/local/texlive/2015/texmf-dis
+t/fonts/type1/public/mathpazo/fplmri.pfb></usr/local/texlive/2015/texmf-dist/fo
+nts/type1/public/fpl/fplrc8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type
+1/public/fpl/fplrij8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/nowac
+ki/iwona/iwonab.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/nowacki/iwo
+na/iwonar.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplb
+8a.pfb></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplbi8a.pfb
+></usr/local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplr8a.pfb></usr/
+local/texlive/2015/texmf-dist/fonts/type1/urw/palatino/uplri8a.pfb>
+Output written on coupld_heat_water.pdf (9 pages, 471630 bytes).
 PDF statistics:
- 266 PDF objects out of 1000 (max. 8388607)
- 218 compressed objects within 3 object streams
- 100 named destinations out of 1000 (max. 500000)
- 30833 words of extra memory for PDF output out of 35830 (max. 10000000)
+ 236 PDF objects out of 1000 (max. 8388607)
+ 200 compressed objects within 2 object streams
+ 91 named destinations out of 1000 (max. 500000)
+ 30783 words of extra memory for PDF output out of 35830 (max. 10000000)
 
