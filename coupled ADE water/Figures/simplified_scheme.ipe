@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20171031095929" modified="D:20171031100148"/>
+<info created="D:20171128101538" modified="D:20171128104111"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -254,46 +254,47 @@ h
 <page>
 <layer name="alpha"/>
 <view layers="alpha" active="alpha"/>
-<path layer="alpha" stroke="red" pen="heavier">
-192 768 m
-256 768 l
-256 768 l
-192 768 l
+<path layer="alpha" matrix="1 0 0 1 16 0" stroke="black" fill="lightgray" fillrule="wind">
+176 752 m
+176 576 l
+288 576 l
+288 752 l
 h
 </path>
-<path stroke="blue" pen="heavier">
-192 640 m
-256 640 l
-</path>
-<text matrix="1 0 0 1 7.20897 -11.7965" transformations="translations" pos="208 784" stroke="red" type="label" width="18.639" height="6.812" depth="1.49" valign="baseline">$\Gamma_{102}$</text>
-<text matrix="1 0 0 1 -8.79103 -16.6554" transformations="translations" pos="224 640" stroke="blue" type="label" width="18.639" height="6.812" depth="1.49" valign="baseline">$\Gamma_{101}$</text>
-<path stroke="red" pen="heavier" arrow="normal/normal">
-215.322 792.275 m
-201.559 792.275 l
-201.559 768 l
-</path>
 <path stroke="blue" pen="heavier" arrow="normal/normal">
-215.977 607.463 m
-200.904 607.463 l
-200.904 640 l
+240 816 m
+240 752 l
 </path>
-<text transformations="translations" pos="215.322 792.275" stroke="red" type="label" width="62.267" height="6.926" depth="1.93" valign="baseline">0 cm, ponding</text>
-<text transformations="translations" pos="215.977 607.463" stroke="blue" type="label" width="62.184" height="6.926" depth="1.93" valign="baseline">Free drainage
+<text transformations="translations" pos="256 784" stroke="blue" type="label" width="159.981" height="10.756" depth="3.59" valign="baseline" size="Large">precipitation (water flux)
 </text>
-<text matrix="1 0 0 1 -28.1805 -17.6947" transformations="translations" pos="216.632 716.253" stroke="black" type="label" width="22.632" height="9.963" depth="0" valign="baseline">\Large{Soil}</text>
-<path stroke="black" pen="heavier" arrow="normal/normal" rarrow="normal/normal">
-286.756 767.371 m
-286.756 639.576 l
+<text transformations="translations" pos="256 768" stroke="darkorange" type="label" width="178.321" height="10.756" depth="3.59" valign="baseline" size="Large">advection (contaminant flux)</text>
+<path stroke="orange" fill="orange">
+192 720
+208 736
+272 720
+304 704
+224 720
+208 720 u
 </path>
-<text transformations="translations" pos="300.519 702.491" stroke="black" type="label" width="30.995" height="6.42" depth="0" valign="baseline">200 cm</text>
-<path stroke="black" pen="heavier" arrow="normal/normal">
-161.582 638.265 m
-161.582 766.716 l
+<path stroke="brown" fill="brown">
+192 688 m
+304 688 l
+304 672 l
+192 672 l
+h
 </path>
-<text matrix="1 0 0 1 16.384 -3.93217" transformations="translations" pos="132.091 705.112" stroke="black" type="label" width="6.243" height="6.177" depth="0" valign="baseline">\Large{z}</text>
-<path stroke="black" pen="heavier">
-224.497 768 m
-224.497 640 l
+<path stroke="black" arrow="normal/normal">
+352 736 m
+272 720 l
 </path>
+<text matrix="1 0 0 1 -16 0" transformations="translations" pos="368 736" stroke="black" type="label" width="119.479" height="9.521" depth="0" valign="baseline" size="Large">contaminant source</text>
+<path matrix="0.983244 0 0 0.971691 11.7602 8.99345" stroke="black" arrow="normal/normal">
+368 688 m
+304 688 l
+</path>
+<text matrix="1 0 0 1 -31.2555 0" transformations="translations" pos="407.732 680.815" stroke="black" type="label" width="63.29" height="9.962" depth="2.79" valign="baseline" size="Large">clay lense
+</text>
+<text matrix="1 0 0 1 10.4115 0" transformations="translations" pos="223.706 621.177" stroke="black" type="label" width="30.483" height="11.955" depth="0" valign="baseline" size="LARGE">Soil
+</text>
 </page>
 </ipe>

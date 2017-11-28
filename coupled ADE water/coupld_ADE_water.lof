@@ -1,0 +1,6 @@
+\deactivateaddvspace 
+\select@language {english}
+\contentsline {figure}{\numberline {1}{\ignorespaces Simplified scheme of coupled model.\relax }}{2}{figure.caption.1}
+\contentsline {figure}{\numberline {2}{\ignorespaces 1D domain set-up of coupled scenario with top and bottom boundary conditions. There are now two boundary condtions at the top and two boundary conditions at the bottom: contaminant transport and water flow. The top boundary is defined by the interactions with the atmosphere and the bottom boundary is defined by the constant groundwater table.\relax }}{4}{figure.caption.3}
+\contentsline {figure}{\numberline {3}{\ignorespaces Water content and contaminant concentration at the observation points and observation times the homogeneous soil.\relax }}{10}{figure.caption.4}
+\contentsline {figure}{\numberline {4}{\ignorespaces Water content and contaminant concentration at the observation points and observation times with a clay layer.\relax }}{11}{figure.caption.5}
