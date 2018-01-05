@@ -1,0 +1,176 @@
+\documentclass[12pt,oneside]{book}
+\usepackage[vcentering,dvips]{geometry}
+\geometry{papersize={210mm,297mm},total={165mm,230mm}}
+\special{pdf: pagesize width 165mm height 230mm}
+\usepackage{graphicx}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{amssymb}
+\usepackage{graphicx}
+\graphicspath{{images/}}
+\usepackage{graphics}
+\usepackage{fancyhdr}
+\usepackage{epsfig}
+\usepackage{subfigure}
+\usepackage{tabularx}
+\usepackage{adjustbox} % added
+\usepackage{titleref}
+\usepackage{multirow} 
+\usepackage{url}
+\usepackage{picture}
+\usepackage{verbatim}
+\usepackage{xfrac}
+\usepackage{makecell}
+\usepackage[running, displaymath, mathlines]{lineno}
+\linenumbers
+\usepackage{hyperref}
+
+\usepackage[font={footnotesize}, bf]{caption}
+\usepackage[pdf]{pstricks}
+
+\usepackage{appendix}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+% \usepackage[czech]{babel}
+% \languageattribute{czech}{split}
+
+\usepackage{cmap}
+
+\usepackage{color}
+%\usepackage[usenames,dvipsnames]{xcolor}% uncommented
+\definecolor{siva}{RGB}{100,200,255} 
+\usepackage[framemethod=TikZ]{mdframed}
+\mdfdefinestyle{nevyz}{%
+    linecolor=blue,
+    outerlinewidth=1pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+%     backgroundcolor=gray!30!white}
+    backgroundcolor=siva}
+
+   \mdfdefinestyle{vyz}{%
+    linecolor=red,
+    outerlinewidth=4pt,
+    roundcorner=10pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=10pt,
+    innerleftmargin=10pt,
+    backgroundcolor=white}
+%     backgroundcolor=white} 
+    
+\renewcommand{\baselinestretch}{1.5}
+
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}
+\newcommand{\SRule}{\rule{\linewidth}{0.2mm}}
+\newcommand{\dd}{\textrm{d}}
+\newcommand{\nd}{2$^{\textrm{nd}}$~}
+\newcommand{\st}{1$^{\textrm{st}}$~}
+
+% \newcommand{\d}{\textrm{d}}
+\def\listofsymbols{\input{symbols} \clearpage}
+\def\addsymbol #1: #2#3{$#1$ \> \parbox{4.323in}{#2 \dotfill \pageref{#3}}\\}
+\def\newnot#1{\label{#1}} 
+\def\tvdots{\raisebox{3pt}{$\scalebox{.75}{\vdots}$}}
+%\begin{document}
+\pagestyle{fancy}
+
+\setcounter{secnumdepth}{3} 
+\setcounter{tocdepth}{3} 
+
+\rhead{\scriptsize\textsf{\rightmark}}
+\chead{}
+
+\lfoot{}
+\cfoot{}
+\rfoot{}
+
+% Macro for 'List of Symbols', 'List of Notations' etc...
+\def\listofsymbols{\input{symbols} \clearpage}
+\def\addsymbol #1: #2#3{$#1$ \> \parbox{4.323in}{#2 \dotfill \pageref{#3}}\\}
+\def\newnot#1{\label{#1}} 
+\def\tvdots{\raisebox{3pt}{$\scalebox{.75}{\vdots}$}}
+\usepackage{footnote}
+\usepackage[bottom]{footmisc}
+\usepackage{amsmath}
+\usepackage{mathrsfs}
+
+\usepackage{tikz}
+\newcommand*\circled[1]{\tikz[baseline=(char.base)]{
+            \node[shape=circle,draw,inner sep=2pt] (char) {#1};}}
+
+            
+
+\begin{document}
+
+
+\input{title}
+
+\tableofcontents
+
+%\include{zkratky}
+
+%\include{jednotky}
+
+\pagestyle{fancy}
+\lhead{}
+\rhead{\scriptsize\textsf{\rightmark}}
+\chead{ }
+\pagenumbering{arabic}
+\cfoot{\thepage}
+
+\resetlinenumber
+\input{intro.tex}
+\input{tutorial_heat1.tex}
+\input{tutorial_heat2.tex}
+\resetlinenumber
+\input{tutorial_inf1.tex}
+\input{tutorial_inf2.tex}
+\resetlinenumber
+\input{tutorial_coupled1.tex}
+\input{tutorial_coupled2.tex}
+\resetlinenumber
+\input{appendixA.tex}
+%\include{PDEs}
+
+% \include{darcy}
+% 
+% \resetlinenumber
+% 
+% \include{gwf}
+% 
+% \resetlinenumber
+% 
+% \include{richards}
+% 
+% \resetlinenumber
+% 
+% \include{satunsat}
+% 
+% \resetlinenumber
+% 
+% \include{transport}
+% 
+% \resetlinenumber
+% 
+% \include{rovtrans}
+% 
+% \include{nekonvtrans}
+% 
+% \resetlinenumber
+% 
+% \include{bc}
+
+%\include{bibli}
+
+
+
+
+
+\end{document}
