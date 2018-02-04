@@ -3,7 +3,7 @@
 \subsection{Goal and Complexity}
 \subsection*{Complexity: Medium}
 
-\subsection*{Prerequisites: None}
+\subsection*{Prerequisites: Heat and Water Flow} 
 
 The goal of this tutorial is to get familiar with the idea of coupled models in 1D. For this we couple the $DRUtES$ standard Richards equation module and the heat module. We apply solar radiation data and rain and evaporation data as input.
 
@@ -13,7 +13,8 @@ The goal of this tutorial is to get familiar with the idea of coupled models in 
 \caption{Simplified scheme of coupled model.}
 \end{figure}
 
-In the real world many coupled processes occur. Heat conduction is dependent on the water content and water flow is dependent on heat properties. 
+In the real world many coupled processes occur. In our model, heat conduction is dependent on the water flow as it transports the heat in the soil. 
+In reality, heat and water is even more closely coupled as soil hydraulic properties are also dependent on temperature, e.g. surface tension and density change with temperature.  
 
 In this tutorial three configuration files will be modified step by step. All configuration files are located in the folder \emph{drutes.conf} and respective subfolders. \begin{enumerate}
 \item For selection of the module, dimension and time information we require \emph{global.conf}.  \emph{global.conf} is located in \emph{drutes.conf / global.conf}. 
@@ -26,11 +27,17 @@ $DRUtES$ works with configuration input file with the file extension .conf. Blan
 \newpage
 \subsection{Scenarios}
 
-We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils. 
+For these coupled scenarios we need to define four boundary conditions, two for the heat flow and two for the water flow. We assume simplifying conditions for the bottom boundary. We assume the groundwater table to be at the bottom boundary. This condition does not change over time. Therefore we assign a constant Dirichlet condition for the water flow. We also assume that the temperature of the groundwater remains constant for the given simulation time. This means that we know the temperature, the solution of the heat flow equation and therefore assign a Dirichlet condition for the heat flow. 
 
+In the following scenarios, the water flow is determined by evaporation and precipitation, or more generally time-varying rates of water, therefore the top boundary for the water flow is a Neumann condition. The heat flow over the top boundary is determined by radiation by the sun during the day and radiative cooling during the night. This condition can be understood as a Neumann condition. In these scenarios we want to investigate patterns of temperature oscillations.
+
+We use time-varying boundary conditions for the heat and water flow, which need to be read from files. The file meteo\_heat.bc needs to be renamed to 102.bc in the heat folder. The file meteo\_water.bc needs to be renamed to 102.bc in the water.conf folder.
+
+The material properties needed for scenarios are in Tab. \ref{tab_coup1}.
+ 
 \begin{table}[!h]
 \centering
-\caption{\label{tab_heat}Material properties needed for scenarios.}
+\caption{\label{tab_coup1}Material properties needed for scenarios.}
 \adjustbox{max height=\dimexpr\textheight-2cm\relax,
            max width=\textwidth}{
 
@@ -175,7 +182,7 @@ id & bottom & top \\
 	\end{tabular}
 }
 \item sink(-) /source (+) term per layer: 0
-\item Initial condition is a constant pressure head of -200 cm across the soil. \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\item Initial condition is a constant pressure head of -200 cm across the soil.\\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c | c|c |}
 		\hline

@@ -1,6 +1,6 @@
 \chapter{Water flow module}
 
-\section{Infiltration- Part 1}
+\section{Infiltration - Part 1}
 \subsection{Goal and Complexity}
 \subsubsection*{Complexity: Beginner}
 
@@ -24,11 +24,11 @@ $DRUtES$ works with configuration input file with the file extension .conf. Blan
 \newpage
 \subsection{Scenarios}
 
-We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils. 
+We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils. The parameters describe clay, silt and sand (Tab. \ref{tab_inf1}). We assume a constant flow of water infiltrating over the top boundary. We can also look at this as a constant rate of water and it therefore describes the temporal derivative. This type of boundary is called a \textbf{Neumann condition}. We assume that the groundwater table is at the bottom of our profile. We therefore assume a constant state of saturation at the bottom profile. In these scenarios we want to investigate the effect of spatial and temporal discretization.
 
 \begin{table}[!h]
 \centering
-\caption{\label{tab_heat}Material properties needed for scenarios.}
+\caption{\label{tab_inf1}Material properties needed for scenarios.}
 \adjustbox{max height=\dimexpr\textheight-2cm\relax,
            max width=\textwidth}{
 
@@ -49,7 +49,7 @@ $\alpha$ [cm$^{-1}$]& inverse of the air entry value &0.10 &0.08&0.01 \\
 }
 \end{table}
 \begin{figure}[!h]
-
+\centering
 \includegraphics[width=6cm]{Fig_inf1/retention_curve.png}
 \includegraphics[width=6cm]{Fig_inf1/cond_hyd_curve.png}
 \end{figure}
