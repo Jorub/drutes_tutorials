@@ -6,53 +6,10 @@
 
 The goal of this tutorial is to get familiar with the $DRUtES$ standard Richards equation module and $DRUtES$ configuration in 1D by simulating infiltration into different soil \medskip
 
-\begin{figure}[!h]
-\centering
-\includegraphics[width=8cm]{Fig_inf2/infilt.png}
-\caption{Simplified scheme of infiltration.}
-\end{figure}
-The process of infiltration is fundamental and yet very important in soil science. Infiltration into the soil determines water, heat and contaminant transport. Infiltration experiments can be used to determine some parameters describing soil hydraulic properties. 
-
-In this tutorial three configuration files will be modified step by step. All configuration files are located in the folder \emph{drutes.conf} and respective subfolders. \begin{enumerate}
-\item For selection of the module, dimension and time information we require \emph{global.conf}.  \emph{global.conf} is located in \emph{drutes.conf / global.conf}. 
-\item To define the mesh or spatial discretization in 1D,  we require \emph{drumesh1D.conf}. \emph{drumesh1D.conf} is located in \emph{drutes.conf / mesh / drumesh1D.conf}. 
-\item To define the infiltration, we require \emph{matrix.conf}. \emph{matrix.conf} is located in \emph{drutes.conf /water.conf/ matrix.conf}. 
-\end{enumerate}
-$DRUtES$ works with configuration input file with the file extension .conf. Blank lines and lines starting with \# are ignored. The input mentioned in this tutorial therefore needs to be placed one line below the mentioned keyword, unless stated otherwise. 
-
-\newpage
 \subsection{Scenarios}
 
-We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils. 
+We use the same parameters as in the previous infiltration scenario (Tab. \ref{tab_inf1}). We assume a constant ponding depth at the top boundary.  Similar to the state of saturation in the previous scenario at the bottom boundary, where we knew the solution of the water table, we can assume the height of the water table, the ponding depth, to be defined with a Dirichlet condition, where the value is similar to the height of the ponding depth. At the bottom, we assume that only gravitational force acts on the bottom drainage. This also means that the pressure head gradient is zero. This boundary condition is called \textbf{free drainage}. The set-up of these scenarios are the same as in the previous infiltration scenarios, except for the boundary conditions. In these scenarios, we also want to investigate the effects on discretization, especially on the flux over the top boundary.  
 
-\begin{table}[!h]
-\centering
-\caption{\label{tab_heat}Material properties needed for scenarios.}
-\adjustbox{max height=\dimexpr\textheight-2cm\relax,
-           max width=\textwidth}{
-
-\small\begin{tabular}{l l c c c c c c}
-\hline
-Parameter & Description & Sand & Silt & Clay\\
-\hline
-
-$\alpha$ [cm$^{-1}$]& inverse of the air entry value &0.10 &0.08&0.01 \\
- $n$ [-]& shape parameter &2.2  & 1.8&1.5  \\
- $m$ [-]& shape parameter &0.55  & 0.44 & 0.33  \\
-  $ \theta_s$ [-]&saturated vol. water content&0.4  & 0.45 & 0.5  \\
-  $ \theta_r$ [-]& residual vol. water content&0.0 & 0.05 & 0.1  \\
-  $Ss$ [cm$^{-1}$] & specific storage & 0 & 0 & 0 \\
-  $K_s$ [cm d$^{-1}$] & saturated hydraulic conductivity & 400 & 40 & 4 \\ 
-\hline
-\end{tabular}
-}
-\end{table}
-\begin{figure}[!h]
-
-\includegraphics[width=6cm]{Fig_inf2/retention_curve.png}
-\includegraphics[width=6cm]{Fig_inf2/cond_hyd_curve.png}
-\caption{Retention curve and hydraulic conductivity for parameterized with van Genuchten model for sand, silt and clay.}
-\end{figure}
 
 \begin{figure}[!h]
 \centering
@@ -170,7 +127,7 @@ id & bottom & top \\
 	\end{tabular}
 }
 \item sink(-) /source (+) term per layer: 0
-\item Initial condition is a constant pressure head of -200 cm across the soil. \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\item Initial condition is a constant pressure head of -200 cm across the soil. \\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c | c|c |}
 		\hline

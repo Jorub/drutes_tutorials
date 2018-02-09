@@ -23,7 +23,7 @@ $DRUtES$ works with configuration input file with the file extension .conf. Blan
 
 For all scenarios, we assume that the wall is between a heated room, which is maintaining a constant temperature of 20 $^{\circ}$C, and the outside world during winter, which for the sake of simplicity is at a constant temperature of 0 $^{\circ}$C.
 
-\begin{table}[!h]\caption{\label{tab_heat}Material properties needed for scenarios.}
+\begin{table}[!h]\caption{\label{tab_heat2}Material properties needed for scenarios.}
 \adjustbox{max height=\dimexpr\textheight-5cm\relax,
            max width=\textwidth}{
 
@@ -167,12 +167,12 @@ Run the simulation in the terminal console.
 \section*{Result of scenario 1}
 
 \subsection*{Question 1}
-Figure \ref{plot1} shows two distinct linear temperature distributions. The temperature distributions appears to have not changed significantly over the last observation times indicating a steady state. A 5 cm thick cotton fibre wall is between the concrete stone and the heated inside. The overall heat flux at the inside border is therefore quite low as the input of heat has to travel through badly conducting material first. 
+Figure \ref{plot1h} shows two distinct linear temperature distributions. The temperature distributions appears to have not changed significantly over the last observation times indicating a steady state. A 5 cm thick cotton fibre wall is between the concrete stone and the heated inside. The overall heat flux at the inside border is therefore quite low as the input of heat has to travel through badly conducting material first. 
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_time_temp_concretecotton1.png}
-\caption{\label{plot1}Plot of observation times for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer  generated with Rscript heatplots.R}
+\caption{\label{plot1h}Plot of observation times for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer  generated with Rscript heatplots.R}
 \end{figure}
 
 \subsection*{Question 2}
@@ -180,7 +180,7 @@ Figure \ref{plot1} shows two distinct linear temperature distributions. The temp
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_point_temp_concretecotton1.png}
-\caption{\label{plot2} Heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R}
+\caption{\label{plot2h} Heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R}
 \end{figure}
 
 Looking at the raw data, it appears that steady-state has not actually been reached, but that the change in heat flux is becoming slower and is converging towards 15 W m$^{-2}$. 
@@ -188,13 +188,13 @@ Looking at the raw data, it appears that steady-state has not actually been reac
 \newpage
 \subsection*{Question 3}
 
-Figure \ref{plot3} shows the cumulative heat flux in observation points 1 and 2, both ends of the wall. The cumulative heat flux after 24 h at observation point is 538 W m$^{-2}$. With a wall area of 15 m$^2$ this results in $Q = 538~\mathrm{W~h~m^{-2}}\cdot~15~\mathrm{m^{2}}= 8070 ~\mathrm{W~h}$. 
+Figure \ref{plot3h} shows the cumulative heat flux in observation points 1 and 2, both ends of the wall. The cumulative heat flux after 24 h at observation point is 538 W m$^{-2}$. With a wall area of 15 m$^2$ this results in $Q = 538~\mathrm{W~h~m^{-2}}\cdot~15~\mathrm{m^{2}}= 8070 ~\mathrm{W~h}$. 
 For the next 24 h, the heat flux will be constant at 15 $\mathrm{~W~m^{-2}}$. The total heat loss will therefore be $Q=15 \mathrm{~W~m^{-2}}~\cdot 24~\mathrm{h}~\cdot~15~\mathrm{m^{2}}=5400 \mathrm{~W~h}$.
 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_point_cum_temp_concretecotton1.png}
-\caption{\label{plot3} Cumulated heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R}
+\caption{\label{plot3h} Cumulated heat flux at observation points 1 and 2 for a wall with a 15 cm outer stone concrete layer and an inner 5 cm cotton fibre layer generated with Rscript heatplots.R}
 \end{figure}
 
 \newpage
@@ -227,11 +227,11 @@ Run the simulation in the terminal console.
 
 \section*{Result of scenario 2}
 \subsection*{Question 1}
-Figure \ref{plot4} shows the inner concrete layer becomes linear quite quickly, but that the outer cotton fibre layer has not reached linearity after 24 h. Also taking Fig. \ref{plot5} 
+Figure \ref{plot4h} shows the inner concrete layer becomes linear quite quickly, but that the outer cotton fibre layer has not reached linearity after 24 h. Also taking Fig. \ref{plot5h2} 
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_time_temp_concretecotton2.png}
-\caption{\label{plot4}Plot of observation times for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
+\caption{\label{plot4h}Plot of observation times for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
 \end{figure}
 
 \subsection*{Question 2}
@@ -241,7 +241,7 @@ The system has not reached a constant heat flux, but the heat flux will be betwe
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_point_temp_concretecotton2.png}
-\caption{\label{plot5} Heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
+\caption{\label{plot5h2} Heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
 \end{figure}
 
 
@@ -253,7 +253,7 @@ For the next 24 h, the heat flux will not be constant and needs to be numericall
 \begin{figure}[!h]
 \centering
 \includegraphics[width=10.5cm]{Fig_heat2/obs_point_cum_temp_concretecotton2.png}
-\caption{\label{plot6} Cumulated heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
+\caption{\label{plot6h2} Cumulated heat flux at observation points for a wall with a 15 cm thick outer cotton layer and a 5 cm inner concrete stone layer generated with Rscript heatplots.R}
 \end{figure}
 
 \newpage

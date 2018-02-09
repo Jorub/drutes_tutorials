@@ -5,7 +5,7 @@
 \subsection{Goal and Complexity}
 \subsection*{Complexity: Medium}
 
-\subsection*{Prerequisites: None}
+\subsection*{Prerequisites: Water flow module}
 
 The goal of this tutorial is to introduce contaminant transport. For this we couple the $DRUtES$ standard Richards equation module with the ADE module. ADE stands for Advection-Dispersion-Equation. The advection will be calculated through the Richards-Equation (water flow).
 
@@ -29,11 +29,11 @@ $DRUtES$ works with configuration input file with the file extension .conf. Blan
 \newpage
 \subsection{Scenarios}
 
-We are using the well-known van Genuchten-Mualem parameterization to describe the soil hydraulic properties of our soils and contaminant transport. 
+In the following scenario, there is a contaminant of a known concentration in the soil, which we can set with appropriate layering of our domain and the initial condition. This coupled model also requires four boundary conditions, two for the water flow and two for the contaminant transport. We assume that the contaminant does not reach the bottom of our domain, nor the top boundary. The boundary conditions for the contaminant transport at both boundaries are constant Dirichlet conditions. The bottom boundary represents the groundwater table. We assign a Dirichlet condition for the water flow at the bottom of the profile. We assume precipitation occurs at the top boundary and therefore, we assign a Neumann condition at the top boundary. In these scenarios we want to investigate the effect of a soil layer with different hydraulic properties below the contaminant.  
 
 \begin{table}[!h]
 \centering
-\caption{\label{tab_heat}Material properties needed for scenarios.}
+\caption{\label{tab_coup2}Material properties needed for scenarios.}
 \adjustbox{max height=\dimexpr\textheight-2cm\relax,
            max width=\textwidth}{
 
@@ -178,7 +178,7 @@ id & bottom & top \\
 	\end{tabular}
 }
 \item sink(-) /source (+) term per layer: \\ 0 \\ 0 \\0 \\0 \\ 0
-\item Initial condition is a constant pressure head of -200 cm across the soil. \adjustbox{max height=\dimexpr\textheight-5cm\relax,
+\item Initial condition is a constant pressure head of -200 cm across the soil.\\ \adjustbox{max height=\dimexpr\textheight-5cm\relax,
 	max width=\textwidth}{
 	\small\begin{tabular}{|c | c | c|c |}
 		\hline
@@ -357,7 +357,7 @@ Run the simulation in the terminal console.
 
 \begin{enumerate}
 \item Describe the distribution of the contaminant without and with the clay layer.
-\item Investigate how the simulation differs: (i) With a different soil material (ii) when you include a reaction in contaminant.confS
+\item Investigate how the simulation differs: (i) With a different soil material (ii) when you include a reaction in contaminant.conf
 \end{enumerate}
 
 \newpage
