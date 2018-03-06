@@ -27,6 +27,11 @@ In this tutorial three configuration files will be modified step by step. All co
 \end{enumerate}
 $DRUtES$ works with configuration input file with the file extension .conf. Blank lines and lines starting with \# are ignored. The input mentioned in this tutorial therefore needs to be placed one line below the mentioned keyword, unless stated otherwise. 
 
+We use the heat equation for one-dimensional problems given as
+\begin{equation}
+C\frac{\partial T}{\partial t} =\kappa_T\frac{\partial^2 T}{\partial x^2},
+\end{equation}
+where $C$ is the volumetric heat capacity [$\mathrm{J.K^{-1}}$], $T$ is the temperature [K], and $\kappa_T$ is the thermal conductivity [$\mathrm{W.m^{-1}.K^{-1}}$]. 
 
 
 \newpage
@@ -52,7 +57,7 @@ We can assume a simple domain set-up as in Fig. \ref{dsuh1}. What is missing is 
 \small\begin{tabular}{l c c c}
 \hline
 & specific heat capacity & density & thermal conductivity\\
-& c$_p$ &  $\rho$ & $\lambda$ \\
+& C$_p$ &  $\rho$ & $\kappa_T$ \\
 Material & [J kg$^{-1}$ K$^{-1}$] & [kg m$^{-3}$] & [W m$^{-1}$ K$^{-1}$  ] \\
  \hline
 Stone concrete & 750 & 1400 & 1.7 \\
@@ -181,7 +186,7 @@ Run the simulation in the terminal console.
 \begin{enumerate}
 \item How long does it take for the temperature distribution to become linear between the two observation points?
 \item How large is the steady state heat flux through the wall?
-\item Let's assume a wall area of A=15 m$^2$. Use the observation point at the boundary between the wall and the inside of room. How large was the cumulated heat loss 24 h. How much will be lost after 48 h when the set-up does not change?
+\item Let's assume a wall area of A=15 m$^2$. Use the observation point at the boundary between the wall and the inside of room. How large was the cumulated heat loss after 24 h. How much will be lost after 48 h when the set-up does not change?
 \end{enumerate}
 
 
@@ -206,7 +211,7 @@ Figure \ref{plot1} shows that the temperature distribution becomes linear quite 
 
 The constant heat flux value is at $\phi_{p}$=170 W m$^{-2}$. This value can also be calculated using the equation:
 \begin{equation*}
-\phi_{\mathrm{p}}=-\lambda\frac{dT}{dx}= -1.7 \frac{20-0}{0.2}= 170 \mathrm{~W~m^{-2}}
+\phi_{\mathrm{p}}=-\kappa_T \frac{dT}{dx}= -1.7 \frac{20-0}{0.2}= 170 \mathrm{~W~m^{-2}}
 \end{equation*}
 
 \newpage
@@ -332,7 +337,7 @@ In contrary to scenario 1 and 2, figure \ref{plot7} and \ref{plot8} show that we
 
 We cannot estimate the constant heat flux during steady-state with our results. Using the heat flux equation mentioned during scenario 1, we can calculate the heat flux during steady state:
 \begin{equation*}
-\phi_{\mathrm{p}}=-\lambda\frac{dT}{dx}= -0.04 \frac{20-0}{0.2}= 4 \mathrm{~W~m^{-2}}
+\phi_{\mathrm{p}}=-\kappa_T \frac{dT}{dx}= -0.04 \frac{20-0}{0.2}= 4 \mathrm{~W~m^{-2}}
 \end{equation*}
 
 \subsection*{Question 3}

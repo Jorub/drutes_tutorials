@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <!DOCTYPE ipe SYSTEM "ipe.dtd">
 <ipe version="70206" creator="Ipe 7.2.7">
-<info created="D:20171031095929" modified="D:20180201113749"/>
+<info created="D:20171031095929" modified="D:20180306220723"/>
 <ipestyle name="basic">
 <symbol name="arrow/arc(spx)">
 <path stroke="sym-stroke" fill="sym-stroke" pen="sym-pen">
@@ -268,8 +268,8 @@ h
 </path>
 <text matrix="1 0 0 1 16 0" transformations="translations" pos="224 352" stroke="black" type="label" width="36.771" height="11.955" depth="0" valign="baseline" size="LARGE">Wall
 </text>
-<text transformations="translations" pos="80 336" stroke="blue" type="label" width="27.973" height="11.764" depth="2.58" valign="baseline" size="LARGE">$\Gamma_{101}$</text>
-<text matrix="1 0 0 1 336 0" transformations="translations" pos="80 336" stroke="red" type="label" width="27.973" height="11.764" depth="2.58" valign="baseline" size="LARGE" style="math">\Gamma_{101}</text>
+<text transformations="translations" pos="80 336" stroke="blue" type="label" width="27.973" height="11.764" depth="2.58" valign="baseline" size="LARGE" style="math">\Gamma_{101}</text>
+<text matrix="1 0 0 1 336 0" transformations="translations" pos="80 336" stroke="red" type="label" width="27.973" height="11.764" depth="2.58" valign="baseline" size="LARGE" style="math">\Gamma_{102}</text>
 <text matrix="1 0 0 1 16 -64" transformations="translations" pos="400 368" stroke="red" type="label" width="31.061" height="11.761" depth="0" valign="baseline" size="LARGE">0 $^\circ$C</text>
 <text matrix="1 0 0 1 -320 -64" transformations="translations" pos="400 368" stroke="blue" type="label" width="38.956" height="11.761" depth="0" valign="baseline" size="LARGE">20 $^\circ$C</text>
 <text matrix="1 0 0 1 16 16" transformations="translations" pos="208 272" stroke="black" type="label" width="65.877" height="11.764" depth="2.58" valign="baseline" size="LARGE">T$_\mathrm{init}=0^\circ$</text>
